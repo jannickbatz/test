@@ -1,0 +1,128 @@
+html{
+	font-family:helvetica,arial,;
+	font-size:1.25em;
+}
+
+body{margin:0;
+position:relative;
+height:100vh;
+}
+#welcome{
+	background-color:rgb(30, 29, 85);
+	color:white;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	text-align:center;
+	height:100vh;
+
+}
+
+	#PlayGame{
+	margin-bottom:3em;
+}
+#PlayGame label{
+	padding:1.25em;
+	border:solid 2px white;
+	font-weight:300px;
+	box-sizing: border-box;
+	margin:2em .5em 4em;
+	display:inline-block;
+}
+
+	
+	#PlayGame input[type=radio]{
+		display:none;
+}
+#PlayGame input[type=radio]:checked+label {
+    background-color:rgb(211, 211, 211);
+    color:white;
+}
+#PlayGame button[type=submit]{
+	display:block;
+	margin:0 auto;
+	padding:1em 2.5em;
+	border-radius:25%;
+	background-color:white;
+	font-weight:700;
+	color:rgba(38, 32, 128, 0.712);
+	border:none;
+}
+	#board{
+	display:none;
+	width:100%;
+	padding: 1.5vh;
+	flex-wrap:wrap;
+	justify-content:space-around;
+	align-content:flex-start;
+	background-color:grey; 
+	box-sizing:border-box;
+	perspective:800px;
+	 
+}
+#board section {
+	width:22vw;
+	height:22vw;
+	margin:1vw 0;
+	position:relative;
+	transform: rotateY(0deg);
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+	z-index:3; 
+	transition: 0.3s;
+}
+
+.front,.back{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	backface-visibility:hidden;
+	-webkit-backface-visibility:hidden;
+
+}
+.front{
+	background-color:tomato;
+	z-index:2;
+	
+}
+.back{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:250%;
+	z-index:1;
+	background-color:rgb(255, 255, 255);
+	transform:rotateY(180deg);
+	
+}
+	#message{
+	z-index:-1;
+	position:absolute;
+	width:100%;
+	left:0;
+	top:10%;
+	padding:2.25em;
+	opacity: 0;
+	background-color:lightgreen;
+	box-sizing:border-box;
+	transition: all 0.4s;
+}
+	#message.show{
+       top:20%;
+       opacity:1;
+       width:80%;
+       left:10%;
+       padding:1.25em;
+       z-index:4;
+	}
+#board .flip{
+	transform:rotateY(180deg);
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+}
+.reward{
+	box-shadow:0 0 1px 2px rgba(218, 89, 164, 0.7);
+
+}

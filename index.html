@@ -1,9 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head><link rel="stylesheet" type="text/css" href="style.css">
-	<title>hello world</title>
+<html lang=da manifest="manifest.appcache">
+<head>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<title>memoryapp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset=utf-8>
+	<meta name="apple-mobile-web-app-capbaæe" content="yes">
+	<link rel="apple-touch-icon" href="icon.png">	
+	<link rel="apple-touch-precomposed" href="icon.png">	
+	<link rel="manifest" href="web-app-manifest.json">
 </head>
 <body>
+<div id='welcome'>
+<h1>Welcome</h1>
+<p>choose number of tiles:-D</p>
 
+<form id="PlayGame">
+<input type="radio" name="level" value="16" checked id="sixteen" >
+<label for="sixteen">16</label>	
+<input type="radio" name="level" value="20" id="twenty">
+<label for="twenty">20</label>	
+<input type="radio" name="level" value="24" id="twentyfour">
+<label for="twentyfour">24</label>
+
+
+<button type="submit">play game</button>
+</form>
+</div>
+<!--welcome-->
+<div id="board">
+ 
+
+</div>
+<div id="message">
+<h1>Tillykke</h1>
+<button type="submit">Play again</button>
+</div>
+<script src="java1.js"></script>
 </body>
 </html>
